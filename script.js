@@ -1,9 +1,9 @@
-const img = n => `assets/${n}`;
+const img = n => `${n}`;
 const socialImages = [
   'social-analytics-01.jpeg','social-analytics-02.jpeg','instagram-profile-01.jpeg','instagram-profile-02.jpeg','social-content-01.jpeg','instagram-analytics-01.jpeg','social-analytics-03.jpeg','social-analytics-04.jpeg','social-story-01.jpeg','social-story-02.jpeg','social-story-03.jpeg','event-story-01.jpeg','social-story-04.jpeg','social-story-05.jpeg'
 ];
 const allImages = [
- '0a5a3af7-dafc-413b-a5e4-d46dac61772c.jpeg','social-story-01.jpeg','artist-content-01.jpeg','social-story-02.jpeg','social-story-03.jpeg','event-bts-01.jpeg','event-story-01.jpeg','event-story-02.jpeg','campaign-poster-01.jpeg','saint-location-01.jpeg','saint-location-02.jpeg','saint-location-03.jpeg','saint-location-04.jpeg','saint-location-05.jpeg','music-platform-evidence-01.png','music-platform-evidence-02.png','music-platform-evidence-03.png','music-platform-evidence-04.png','social-story-04.jpeg','social-story-05.jpeg','event-crowd-01.jpeg','artist-performance-01.jpeg','youtube-presence.jpeg','event-crowd-02.jpeg','event-story-03.jpeg','behind-scenes-01.jpeg'
+ 'social-story-01.jpeg','artist-content-01.jpeg','social-story-02.jpeg','social-story-03.jpeg','event-bts-01.jpeg','event-story-01.jpeg','event-story-02.jpeg','campaign-poster-01.jpeg','saint-location-01.jpeg','saint-location-02.jpeg','saint-location-03.jpeg','saint-location-04.jpeg','saint-location-05.jpeg','music-platform-evidence-01.png','music-platform-evidence-02.png','music-platform-evidence-03.png','music-platform-evidence-04.png','social-story-04.jpeg','social-story-05.jpeg','event-crowd-01.jpeg','artist-performance-01.jpeg','youtube-presence.jpeg','event-crowd-02.jpeg','event-story-03.jpeg','behind-scenes-01.jpeg'
 ];
 function gallery(el, arr){arr.forEach((name,i)=>{const b=document.createElement('button');b.className='gallery-item';b.innerHTML=`<img loading="lazy" src="${img(name)}" alt="Portfolio evidence ${i+1}">`;b.onclick=()=>openImage(name);el.appendChild(b)})}
 document.querySelectorAll('.gallery').forEach((el)=>gallery(el,el.classList.contains('all-gallery')?allImages:socialImages));
